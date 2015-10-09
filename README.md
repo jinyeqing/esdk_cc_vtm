@@ -1,2 +1,2 @@
 # esdk_cc_vtm
-android
+esdk_cc_vtm
