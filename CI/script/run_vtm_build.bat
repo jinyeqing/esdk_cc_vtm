@@ -1,0 +1,1 @@
+ant -f vtm_android_build.xml

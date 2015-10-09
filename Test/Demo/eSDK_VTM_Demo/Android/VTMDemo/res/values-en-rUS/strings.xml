@@ -1,0 +1,127 @@
+<resources>
+
+    <string name="app_name">VTMDemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="calleeLabel">vta num</string>
+    <string name="makeCallBtn">make call</string>
+    <string name="goCallPageBtn">go call page</string>
+    <string name="goMeetingPageBtn">go meeting page</string>
+    <string name="set">settings</string>
+    <string name="mode">mode</string>
+    <string name="screenshot">screenshot</string>
+    <string name="video_param">video param setting：</string>
+    <string name="xRes">x solution(Width)</string>
+    <string name="yRes">y solution(Height)</string>
+    <string name="nFrame">frame</string>
+    <string name="msgTest">MessageTest</string>
+    <string name="anonymous">anonymous call</string>
+    <string name="no_anonymous">common call</string>
+    <string name="anonymous_call">make anonymous call</string>
+    <string name="accessCode">access code</string>
+     <string name="userId">user Id</string>
+     <string name="userPwd">user Pwd</string>
+     <string name="login">login</string>
+     <string name="token_tip">Please fill in the correct Token value !</string>
+     <string name="OK">OK</string>
+     <string name="cancel">Cancel</string>
+     <string name="messageTest">message test</string>
+     <string name="logout">logout</string>
+    <string name="full">full screen</string>
+    <string name="prorate">rate</string>
+    <string name="clip">clip</string>
+    <string name="hangup">hang up</string>
+    <string name="rotateBtn">rotate</string>
+    
+    <!-- conference menu -->
+    <string name="menu_conf_control">meeting control</string>
+    <string name="menu_conf_phone">phone</string>
+    <string name="menu_conf_video">video</string>
+    <string name="menu_conf_document">doc</string>
+    <string name="menu_conf_white">whiteboard</string>
+    <string name="menu_conf_screen">screen</string>
+    <string name="menu_conf_audio">audio</string>
+    <string name="menu_conf_view">view</string>
+
+    <!-- conf control menu -->
+    <string name="menu_control_join">join conf</string>
+    <string name="menu_control_exit">leave conf</string>
+    <string name="menu_control_end">end conf</string>
+    <string name="menu_control_lock">lock</string>
+    <string name="menu_control_unlock">unlock</string>
+    <string name="menu_control_kick">make person leave</string>
+
+    <!-- phone control menu -->
+    <string name="menu_control_phone_mute">mute</string>
+    <string name="menu_control_phone_unmute">cancel mute</string>
+    <string name="menu_control_phone_lock">lock</string>
+    <string name="menu_control_phone_unlock">unlock</string>
+    <string name="menu_control_phone_call">call out</string>
+    <string name="menu_control_phone_call_kick">hung up</string>
+    <string name="menu_control_phone_call_mute">mute</string>
+    <string name="menu_control_phone_call_unmute">cancel mute</string>
+
+    <!-- ds control menu -->
+    <string name="menu_control_ds_open">open</string>
+    <string name="menu_control_ds_close">close</string>
+    <string name="menu_control_ds_nextpage">next page</string>
+    <string name="menu_control_ds_priorpage">previous page</string>
+
+    <!-- wb control menu -->
+    <string name="menu_control_wb_new_doc">new doc</string>
+    <string name="menu_control_wb_del_doc">delete doc</string>
+    <string name="menu_control_wb_new_page">new page</string>
+    <string name="menu_control_wb_nextpage">next page</string>
+    <string name="menu_control_wb_priorpage">previous page</string>
+
+    <!-- as control menu -->
+    <string name="menu_control_as_attach_other">view the other\'s screen</string>
+    <string name="menu_control_as_attach">view screen share</string>
+    <string name="menu_control_as_detach">stop screen share</string>
+    <string name="menu_control_as_setparam">half solution share</string>
+    <string name="menu_control_as_setQuarterparam">Quarter solution share</string>
+    <string name="menu_control_as_setowner">get share ability</string>
+    <string name="menu_control_as_start">start share</string>
+    <string name="menu_control_as_stop">stop share</string>
+
+    <!-- video control menu -->
+    <string name="menu_control_video_open">open video</string>
+    <string name="menu_control_video_close">close video</string>
+    <string name="menu_control_video_attach">attach my video</string>
+    <string name="menu_control_video_detach">detach my video</string>
+    <string name="menu_control_video_attach_else">attach other\'s video</string>
+    <string name="menu_control_video_detach_else">detach other\'s video</string>
+    <string name="menu_control_video_pause">pause my video</string>
+    <string name="menu_control_video_resume">resume my video</string>
+    <string name="menu_control_video_pause_else">pause other\'s video</string>
+    <string name="menu_control_video_resume_else">resume other\'s video</string>
+
+    <!-- audio control menu -->
+    <string name="menu_control_audio_open_mic">open microphone</string>
+    <string name="menu_control_audio_close_mic">close microphone</string>
+    <string name="menu_control_audio_open_speaker">open speaker</string>
+    <string name="menu_control_audio_close_speaker">close speaker</string>
+
+    <!-- view control menu -->
+    <string name="menu_control_view_ds">document share</string>
+    <string name="menu_control_view_as">screen share</string>
+    <string name="menu_control_view_wb">whiteboard</string>
+
+    <!-- conference string -->
+    <string name="conf_join_btn">join conf</string>
+    <string name="join_conf_failure">failed to join</string>
+
+    <!-- conf button description -->
+    <string name="shareButton">share screen</string>
+    <string name="muteButton">mute</string>
+    <string name="pauseButton">pause</string>
+
+    <!-- log part -->
+    <string name="checkServerConfig">check server config please</string>
+    <string name="calling_progress_tip">calling, wait please......</string>
+    <string name="logining_progress_tip">logining, wait please......</string>
+    <string name="anonymous_call_response_tip">anonymous call response code -></string>
+	<string name="video_quality">video_quality</string>
+	<string name="queryQueueInfo">queryQueueInfo</string>
+</resources>

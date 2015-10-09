@@ -1,0 +1,122 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huawei.esdk.vtm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+   <uses-sdk
+        android:minSdkVersion="11" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 杀死所有activity -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 修改联系人权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 读取电话状态权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 开机启动权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
+    <!-- 读取短信权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" >
+    </uses-permission>
+    <!-- 发送短信权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" >
+    </uses-permission>
+    <!-- 使用服务的权限 -->
+    <uses-permission android:name="android.permission.SERVICE" >
+    </uses-permission>
+    <!-- 读取任务信息 -->
+    <uses-permission android:name="android.permission.GET_TASKS" >
+    </uses-permission>
+    <!-- 接收短信 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" >
+    </uses-permission>
+    <!-- 关闭电话所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 删除短信所需权限 -->
+    <uses-permission android:name="android.permission.WRITE_SMS" >
+    </uses-permission>
+    <!-- 拨出电话查看所需权限 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <!-- 改变网络状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ADD_SYSTEM_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" >
+    </uses-permission>
+
+    <application
+        android:name="com.huawei.esdk.vtm.VTMApp"
+        android:icon="@drawable/ucvtm"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light"
+        android:debuggable="true" >
+        <activity android:name="com.huawei.esdk.vtm.StartActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.huawei.esdk.vtm.login.LoginActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity android:name="com.huawei.esdk.vtm.call.CallPageActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity android:name="com.huawei.esdk.vtm.ConferenceActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity android:name="com.huawei.esdk.vtm.ConfShareActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity android:name="com.huawei.esdk.vtm.CallConfActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" >
+        </activity>
+        <service android:name="com.huawei.AudioDeviceAndroidService" />
+    </application>
+	
+</manifest>

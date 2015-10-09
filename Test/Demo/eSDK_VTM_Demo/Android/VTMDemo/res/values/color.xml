@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<drawable name="translucent">#00000000</drawable>
+	<drawable name="halftranslucent">#70000000</drawable>
+	<drawable name="black">#000000</drawable>
+	<color name="white">#ffffff</color>
+	<color name="bgcolor">#FF79B30F</color>
+	<color name="gray">#ff4a4a4a</color>
+	<color name="black">#000000</color>
+	<color name="chatcolor">#73797B</color>
+	<color name="imtextowner">#0f8f06</color>
+	<color name="imextother">#26abbf</color>
+	<color name="settingColor">#4a4a4a</color>
+	<color name="bwhite">#b5b5b5</color>
+	<color name="bg">#353737</color>
+	<color name="bigbg">#FF464748</color>
+	<color name="divider">#313431</color>
+	<color name="halfblack">#77000000</color>
+	<color name="imothertitle">#ff0f8f06</color>
+	<color name="imminetitle">#ff26abbf</color>
+	<color name="imbody">#ff4a4a4a</color>
+	<color name="red">#ffff0000</color>
+	<color name="netcolor">#FFbebebe</color>
+	<color name="textunderline">#3579ce</color>
+	<color name="meetingbg">#ffeeeeee</color>
+	<color name="item_meeting">#ff487207</color>
+	<color name="item_othermeet_subject">#ff333333</color>
+	<color name="item_othermeet_states">#ff999999</color>
+
+
+	<!-- new define -->
+	<color name="text_blue">#00ccff</color>
+	<color name="text_blue2">#3e9efe</color>
+	<color name="text_gray">#666666</color>
+	<color name="text_black">#373737</color>
+	<color name="text_light_black">#a1a1a1</color>
+	<color name="text_bg_gray">#f8f7f8</color>
+	<color name="shad_view_color">#88000000</color>
+
+	<color name="text_chat_gray">#737373</color>
+	<color name="text_chat_history">#56b3d7</color>
+	<color name="dial_num">#000000</color>
+	<color name="dial_letter">#737373</color>
+	<color name="search_result_item_one">#fff8f8f8</color>
+	<color name="search_result_item_two">#ffededed</color>
+	<color name="search_result_item_press">#ff57b7dc</color>
+	<color name="dial_bg_gray">#cccccc</color>
+	<color name="affiche_time_bg">#999999</color>
+	<color name="affiche_sub_bg">#57b7dc</color>
+</resources>

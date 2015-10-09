@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp"
+    android:layout_height="@dimen/menu_height"
+    android:background="@color/gray"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/menuAsSetParamTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/menu_control_as_setparam"
+        android:textSize="15sp" >
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/halfblack" />
+    
+    <TextView
+        android:id="@+id/menuAsSetQuarterParamTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/menu_control_as_setQuarterparam"
+        android:textSize="15sp" >
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/halfblack" />
+    
+    <TextView
+        android:id="@+id/menuAsSetOwnerTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/menu_control_as_setowner"
+        android:textSize="15sp" >
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/halfblack" />
+
+    <TextView
+        android:id="@+id/menuAsStartTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/menu_control_as_start"
+        android:textSize="15sp" >
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/halfblack" />
+
+    <TextView
+        android:id="@+id/menuAsAttachTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/menu_control_as_attach_other"
+        android:textSize="15sp" >
+    </TextView>
+
+</LinearLayout>

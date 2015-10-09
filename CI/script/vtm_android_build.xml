@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="eSDK_VTM_Android" default="release" basedir="../../">
+
+	<property name="project_name" value="eSDK_VTM_API" />
+	<property name="src_dir" value="source/eSDK_VTM" />
+	<property name="demo_dir" value="test/demo/eSDK_VTM_Demo" />
+	<property name="platform_dir" value="platform" />
+	<property name="open_src_dir" value="open_src" />
+	<property name="build_dir" value="CI/script" />
+	<property name="release_dir" value="..//Release" />
+	
+	<property name="name.apk" value="VTMDemo.apk" />
+	
+	<property name="sdk_src_dir" value="${src_dir}/Android/eSDK_VTM_API" />
+	<property name="demo_src_dir" value="${demo_dir}/Android/VTMDemo" />
+	
+	<loadproperties srcFile="${build_dir}/release.properties" />
+	
+	<tstamp>
+        <format property="TODAY" pattern="yyyy-MM-dd" locale="cn" />
+  </tstamp>
+  
+  <target name="clean">
+		<echo message="cleaning eSDK_VTM_Android project" />
+		<ant antfile="build.xml" dir="${sdk_src_dir}" target="clean"/>
+
+		<ant antfile="build.xml" dir="${demo_src_dir}" target="clean"/>
+		
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="${sdk_src_dir}/libs">
+				<include name="*.jar" />
+				<include name="armeabi/*.so" />
+			</fileset>	
+		</delete>
+  	
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="${demo_src_dir}/libs">
+				<include name="*.jar" />
+				<include name="armeabi/*.so" />
+			</fileset>	
+		</delete>
+		
+		<delete quiet="true" includeEmptyDirs="true">
+			<fileset dir="${demo_src_dir}/assets">
+				<include name="AnnoRes.zip" />
+			</fileset>	
+		</delete>
+  	
+		<echo message="clean finished eSDK_VTM_Android project" />
+
+		
+	</target>
+	
+	<target name="init" depends="clean" >
+		<echo message="init eSDK_VTM_Android project" />
+
+   
+    
+    <copy todir="${sdk_src_dir}/libs" overwrite="true">
+			<fileset dir="${platform_dir}/VTM/Android/libs">
+				<include name="armeabi/*.so" />
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="${open_src_dir}">
+				<include name="simple-xml-2.3.4.jar" />
+			</fileset>
+    </copy>
+				
+	 	<echo message="init finished eSDK_VTM_Android project " />
+		
+	</target>
+	
+	
+	<target name="release" depends="init">
+		<echo message="building eSDK_VTM_API project" />
+		<ant antfile="build.xml" dir="${sdk_src_dir}" target="release"/>
+	
+		
+		<echo message="build finished eSDK_VTM_API project" />
+		
+		
+		<echo message="to build eSDK_VTM_Demo project" />
+		<copy todir="${demo_src_dir}/libs" overwrite="true">
+			<fileset dir="${sdk_src_dir}/libs/">
+				<include name="*.jar" />
+				<include name="armeabi/*.so" />
+			</fileset>
+		</copy>
+		
+		<copy todir="${demo_src_dir}/assets" overwrite="true">
+			<fileset dir="${sdk_src_dir}/assets/">
+				<include name="AnnoRes.zip" />
+			</fileset>
+		</copy>
+		
+		<ant antfile="build.xml" dir="${demo_src_dir}" target="release"/>
+		<echo message="build finished eSDK_VTM_Demo project" />
+		
+		<!-- <delete quiet="true" includeEmptyDirs="true">
+		  <fileset dir="${release_dir}/${TODAY}" includes="**/*"/>
+		</delete> -->
+		
+		<copy todir="${release_dir}/${TODAY}/tmp/Android/libs" overwrite="true">
+			<fileset dir="${sdk_src_dir}/libs/">
+				<include name="*.jar" />
+				<include name="armeabi/*.so" />
+			</fileset>
+		</copy>
+		
+		<copy todir="${release_dir}/${TODAY}/tmp/Android/assets" overwrite="true">
+			<fileset dir="${sdk_src_dir}/assets/">
+				<include name="AnnoRes.zip" />
+			</fileset>
+		</copy>
+
+		<zip destfile="${release_dir}/${TODAY}/${project_name}_${project_version}_Android.zip" >
+			<fileset dir="${release_dir}/${TODAY}/tmp" />
+		</zip>
+		
+		<delete quiet="true" includeEmptyDirs="true">
+		  <fileset dir="${release_dir}/${TODAY}/tmp" includes="**/*"/>
+		</delete>
+		
+		<copy todir="${release_dir}/${TODAY}/tmp/VTMDemo" overwrite="true">
+			<fileset dir="${demo_src_dir}/">
+				<exclude name="libs/*.jar" />
+				<exclude name="libs/armeabi/*.so" />
+				<exclude name="bin/**" />
+				<exclude name="gen/**" />
+			</fileset>
+		</copy>
+    
+		<zip destfile="${release_dir}/${TODAY}/${project_name}_${project_version}_Android_Demo.zip">
+			<fileset dir="${release_dir}/${TODAY}/tmp" />
+		</zip>
+		
+		<copy tofile="${release_dir}/${TODAY}/${name.apk}" overwrite="true">
+			<fileset dir="${demo_src_dir}/bin">
+				<include name="*-release.apk" />
+			</fileset>
+		</copy>	
+							
+		<zip destfile="${release_dir}/${TODAY}/${project_name}_${project_version}_Android_APK.zip">
+			<fileset dir="${release_dir}/${TODAY}">
+				<include name="${name.apk}" />
+			</fileset>
+		</zip>
+		
+		<delete quiet="true" includeEmptyDirs="true">
+		  <fileset dir="${release_dir}/${TODAY}/tmp"/>
+		</delete>
+		<delete file="${release_dir}/${TODAY}/${name.apk}" />
+		
+	</target>
+	
+
+</project>

@@ -1,0 +1,16 @@
+5编译指南 
+
+5.1目录介绍
+CI/script run_vtm_build.bat一键打包 vtm_android_build.xml ant编译脚本 release.properties版本记录
+open_src 文件夹 开源资源
+platform (华为产品线提供资源)
+source esdk提供的vtm的SDK
+Test esdk提供的vtm的demo
+5.2使用
+编译打包采用的ant,需要将其编译环境处理好。
+双击CI/script/run_vtm_build.bat,运行成功会生成Release的文件夹
+点击进去为打包时间文件夹，继续点入会有3个压缩包
+eSDK_VTM_API_V1.5.30_Android_Demo.zip 解压开即为demo项目，但是libs下库为空
+eSDK_VTM_API_V1.5.30_Android.zip  库的压缩包 解压将libs里面的内容对应到demo\libs里,此时项目便可以运行了
+eSDK_VTM_API_V1.5.30_Android_APK.zip vtm生成的apk
+

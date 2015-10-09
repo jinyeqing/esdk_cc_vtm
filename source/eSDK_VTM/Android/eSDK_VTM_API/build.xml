@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="eSDK_VTM_API" default="release">
+		<property environment="env" />
+  <condition property="isWindows">
+  	<os family="windows" />
+	</condition>
+	
+
+
+
+	<property name="sdk.dir" value="${env.ANDROID_SDK_HOME}" />
+	<property name="ndk.dir" value="${env.NDK_HOME}" />
+
+	
+	<fail unless="sdk.dir" message="sdk.dir is missing. Make sure to set system environment 'ANDROID_SDK_HOME'"  />
+	<!--
+	<fail unless="ndk.dir" message="ndk.dir is missing. Make sure to set system environment 'NDK_HOME'"  />
+
+	<condition property="ndk.build" value="ndk-build.cmd">
+    <isset property="isWindows"/>
+	</condition>
+	
+	<condition property="ndk.build" value="ndk-build">
+    <not>
+    <isset property="ndk.build"/>
+  	</not>
+	</condition>
+	!-->
+	<property file="project.properties" />
+	<property name="sdk-platform-folder" value="${sdk.dir}/platforms/${target}" />
+
+	<property name="jar-dist" value="mVTMapi.jar" />
+	<property name="srcdir" value="src" />
+	<property name="outdir" value="bin" />
+	<property name="destdir" value="libs" />
+	<property name="destsodir" value="${destdir}/armeabi" />
+	<property name="bindir" value="bin" />
+	
+	<path id="android-classpath">
+      <fileset dir="${sdk-platform-folder}">
+        <include name="android.jar"/>
+      </fileset>
+      <fileset dir="${destdir}">
+        <include name="*.jar" />
+      </fileset>
+  </path>
+
+	<target name="init">
+		<mkdir dir="${outdir}" />
+		<mkdir dir="${destdir}" />
+		
+	</target>
+
+
+	<target name="compile">
+		<echo message="Building jar libraries..." />
+		<mkdir dir="${outdir}"/>
+		<javac encoding="utf-8" target="1.6" srcdir="${srcdir}" destdir="${outdir}">
+			<classpath refid="android-classpath"/>
+		</javac>
+		<echo message="DONE (Building jar libraries)" />
+	</target>
+
+
+	<target name="release" depends="compile">
+		<echo message="Building jar libraries..." />
+
+		<jar destfile="${destdir}/${jar-dist}">
+			<fileset dir="${outdir}" includes="**/*.class" />
+		</jar>
+		
+		<echo message="DONE (Building jar libraries)" />
+	</target>
+	
+	<target name="clean">
+					
+		<delete quiet="true" includeEmptyDirs="true">
+    	<fileset dir="${destdir}" includes="**/*"/>
+  	</delete>
+	
+  	
+  	<delete quiet="true" includeEmptyDirs="true">
+    	<fileset dir="${bindir}"/>
+  	</delete>
+  	
+  	<delete quiet="true" includeEmptyDirs="true">
+    	<fileset dir="${objdir}"/>
+  	</delete>
+	</target>
+</project>

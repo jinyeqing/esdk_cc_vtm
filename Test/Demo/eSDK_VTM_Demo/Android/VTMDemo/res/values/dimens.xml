@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="menu_width">130dp</dimen>
+	<dimen name="menu_height">200dp</dimen>
+	<dimen name="local_width">200dp</dimen>
+	<dimen name="local_height">200dp</dimen>
+</resources>
